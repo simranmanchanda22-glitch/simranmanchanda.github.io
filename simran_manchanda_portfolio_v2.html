@@ -1,0 +1,267 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',system-ui,sans-serif;background:#f0f2f5;color:#111827;}
+.port{width:100%;background:#f0f2f5;padding:0 0 32px;}
+
+/* HERO */
+.hero{background:#0d1117;padding:36px 36px 0;position:relative;overflow:hidden;}
+.hero-bg{position:absolute;top:0;right:0;width:260px;height:100%;background:linear-gradient(135deg,transparent 40%,rgba(184,149,42,0.06) 100%);}
+.hero-top{display:flex;align-items:center;gap:20px;position:relative;z-index:1;}
+.av{width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,#b8952a,#e8c96a);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;color:#0d1117;flex-shrink:0;letter-spacing:1px;}
+.hero-info{flex:1;}
+.badge{display:inline-block;font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#b8952a;background:rgba(184,149,42,0.12);border:1px solid rgba(184,149,42,0.25);padding:3px 10px;border-radius:4px;margin-bottom:8px;}
+.hname{font-family:'Playfair Display',Georgia,serif;font-size:32px;font-weight:700;color:#fff;line-height:1.1;margin-bottom:4px;}
+.hrole{font-size:13px;color:rgba(255,255,255,0.5);font-weight:400;}
+.hrole strong{color:rgba(255,255,255,0.8);font-weight:500;}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;position:relative;z-index:1;padding-bottom:24px;}
+.hpill{font-size:11px;font-weight:500;padding:5px 13px;border-radius:20px;display:flex;align-items:center;gap:6px;}
+.hpill-gold{background:rgba(184,149,42,0.15);color:#e8c96a;border:1px solid rgba(184,149,42,0.3);}
+.hpill-teal{background:rgba(26,122,110,0.2);color:#5fcfbf;border:1px solid rgba(26,122,110,0.35);}
+.hpill-gray{background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.55);border:1px solid rgba(255,255,255,0.1);}
+.dot{width:6px;height:6px;border-radius:50%;background:currentColor;opacity:0.7;}
+
+/* STATS */
+.stats{background:#161b22;display:flex;border-top:1px solid rgba(255,255,255,0.06);}
+.stat{flex:1;padding:16px 12px;border-right:1px solid rgba(255,255,255,0.06);text-align:center;}
+.stat:last-child{border-right:none;}
+.stn{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#e8c96a;line-height:1;}
+.stl{font-size:9px;color:rgba(255,255,255,0.35);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;}
+
+/* CONTENT AREA */
+.content{padding:24px 20px 0;display:flex;flex-direction:column;gap:16px;}
+
+/* CARDS */
+.card{background:#fff;border-radius:12px;border:1px solid #e5e7eb;overflow:hidden;}
+.card-head{padding:16px 20px 14px;border-bottom:1px solid #f3f4f6;display:flex;align-items:center;gap:10px;}
+.card-icon{width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;}
+.ci-gold{background:#fdf8ee;color:#b8952a;}
+.ci-teal{background:#e8f6f4;color:#1a7a6e;}
+.ci-navy{background:#eef2ff;color:#3730a3;}
+.ci-rose{background:#fff1f2;color:#be123c;}
+.card-title{font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#374151;}
+.card-num{margin-left:auto;font-size:10px;font-weight:600;color:#b8952a;background:#fdf8ee;padding:2px 8px;border-radius:4px;border:1px solid #e8d59a;}
+.card-body{padding:18px 20px;}
+
+/* SUMMARY */
+.summary-text{font-size:13.5px;color:#4b5563;line-height:1.75;border-left:3px solid #b8952a;padding-left:14px;}
+
+/* STRENGTHS / CONTRIBUTIONS GRID */
+.items{display:flex;flex-direction:column;gap:10px;}
+.item{display:flex;align-items:flex-start;gap:12px;padding:10px 12px;background:#f9fafb;border-radius:8px;border:1px solid #f3f4f6;}
+.item:hover{background:#f3f4f6;}
+.ibadge{width:22px;height:22px;border-radius:5px;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.ib-dark{background:#0d1117;color:#e8c96a;}
+.ib-teal{background:#1a7a6e;color:#fff;}
+.ib-gold{background:#b8952a;color:#fff;}
+.itext{font-size:12.5px;color:#374151;line-height:1.6;}
+.itext strong{color:#111827;font-weight:600;}
+
+/* TWO COL LAYOUT */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+
+/* TECH */
+.tech-sections{display:flex;flex-direction:column;gap:13px;}
+.tcat{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#9ca3af;margin-bottom:6px;}
+.tags{display:flex;flex-wrap:wrap;gap:5px;}
+.tag{font-size:11px;font-weight:500;padding:3px 10px;border-radius:6px;border:1px solid;}
+.tg{background:#f9fafb;color:#374151;border-color:#e5e7eb;}
+.thl{background:#fdf8ee;color:#92400e;border-color:#fcd34d;}
+.ttl{background:#e8f6f4;color:#065f46;border-color:#a7f3d0;}
+
+/* AI BOX */
+.ai-box{background:#0d1117;border-radius:10px;padding:16px;margin-top:16px;}
+.ai-top{display:flex;align-items:center;gap:8px;margin-bottom:12px;}
+.ai-dot{width:8px;height:8px;border-radius:50%;background:#10b981;}
+.ai-label{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);}
+.ai-chips{display:flex;gap:8px;flex-wrap:wrap;}
+.aich{font-size:11.5px;font-weight:500;padding:5px 13px;border-radius:6px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:#e8c96a;}
+.ai-note{font-size:11.5px;color:rgba(255,255,255,0.38);margin-top:12px;line-height:1.6;border-top:1px solid rgba(255,255,255,0.07);padding-top:12px;}
+
+/* ACHIEVEMENTS */
+.ach-list{display:flex;flex-direction:column;gap:10px;}
+.ach{display:flex;gap:14px;align-items:flex-start;padding:12px 14px;border-radius:8px;border:1px solid #f3f4f6;background:#f9fafb;}
+.ach-n{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#e5e7eb;line-height:1;flex-shrink:0;min-width:28px;}
+.ach-t{font-size:12.5px;color:#374151;line-height:1.6;}
+.ach-t strong{color:#111827;font-weight:600;}
+
+/* GROWTH */
+.growth{background:linear-gradient(135deg,#e8f6f4,#f0fdf9);border:1px solid #a7f3d0;border-radius:10px;padding:16px 18px;}
+.growth-label{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#065f46;margin-bottom:8px;}
+.growth-text{font-size:13px;color:#064e3b;line-height:1.7;font-style:italic;}
+.growth-text strong{font-style:normal;color:#047857;font-weight:600;}
+
+/* FOOTER */
+.foot{margin:20px 20px 0;background:#0d1117;border-radius:12px;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;}
+.fl{font-size:11px;color:rgba(255,255,255,0.4);}
+.fl strong{color:rgba(255,255,255,0.75);font-weight:500;}
+.fr{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#b8952a;font-weight:600;}
+</style>
+
+<div class="port">
+
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-top">
+      <div class="av">SM</div>
+      <div class="hero-info">
+        <div class="badge">Fynd · QA Engineer</div>
+        <div class="hname">Simran Manchanda</div>
+        <div class="hrole"><strong>Quality Assurance &amp; Test Automation</strong> &nbsp;·&nbsp; AI-Augmented Testing</div>
+      </div>
+    </div>
+    <div class="hero-pills">
+      <span class="hpill hpill-gold"><span class="dot"></span>8+ Years QA Experience</span>
+      <span class="hpill hpill-teal"><span class="dot"></span>4 Years at Fynd</span>
+      <span class="hpill hpill-gray"><span class="dot"></span>Automation · Manual · Mobile</span>
+      <span class="hpill hpill-gray"><span class="dot"></span>International Client Delivery</span>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stn">8+</div><div class="stl">Years in QA</div></div>
+    <div class="stat"><div class="stn">5+</div><div class="stl">Projects Owned</div></div>
+    <div class="stat"><div class="stn">3</div><div class="stl">Frameworks</div></div>
+    <div class="stat"><div class="stn">1</div><div class="stl">Solo Intl. Client</div></div>
+  </div>
+
+  <div class="content">
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon ci-gold">01</div>
+        <div class="card-title">Profile Summary</div>
+      </div>
+      <div class="card-body">
+        <div class="summary-text">A seasoned QA Engineer with 8+ years of experience and 4 years at Fynd, known for taking complete ownership of quality across complex, multi-platform products. Proven track record of independently launching production-grade applications, leading QA teams, and driving automation adoption across RATL, Playwright, and Cucumber BDD. Currently the sole QA owner for Pizza Hut Malaysia — an international enterprise client. Actively integrates AI tools into daily QA workflows, staying ahead of the curve in modern testing.</div>
+      </div>
+    </div>
+
+    <div class="two-col">
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon ci-teal">02</div>
+          <div class="card-title">Core Strengths</div>
+          <div class="card-num">7</div>
+        </div>
+        <div class="card-body">
+          <div class="items">
+            <div class="item"><div class="ibadge ib-dark">1</div><div class="itext">End-to-end quality ownership — strategy through release sign-off</div></div>
+            <div class="item"><div class="ibadge ib-dark">2</div><div class="itext">Strong solo delivery on high-stakes &amp; international projects</div></div>
+            <div class="item"><div class="ibadge ib-dark">3</div><div class="itext"><strong>Automation engineering</strong> — RATL, Playwright, Cucumber BDD</div></div>
+            <div class="item"><div class="ibadge ib-dark">4</div><div class="itext"><strong>Team leadership</strong> — managing &amp; mentoring QA squads</div></div>
+            <div class="item"><div class="ibadge ib-dark">5</div><div class="itext">AI-first mindset — Cursor, ChatGPT &amp; Claude for test generation</div></div>
+            <div class="item"><div class="ibadge ib-dark">6</div><div class="itext">API testing via <strong>Postman &amp; Charles Proxy</strong>; log analysis via <strong>ADB &amp; Xcode Instruments</strong></div></div>
+            <div class="item"><div class="ibadge ib-dark">7</div><div class="itext"><strong>Deep Fynd platform knowledge</strong> — backend flows, cross-team support &amp; Dev/PM collaboration</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon ci-navy">03</div>
+          <div class="card-title">Key Contributions</div>
+          <div class="card-num">6</div>
+        </div>
+        <div class="card-body">
+          <div class="items">
+            <div class="item"><div class="ibadge ib-teal">1</div><div class="itext">End-to-end QA for <strong>Self-Checkout, QSR &amp; GlamAR</strong> Kiosk apps in live retail; built RATL suites</div></div>
+            <div class="item"><div class="ibadge ib-teal">2</div><div class="itext">Sole QA owner for <strong>Pizza Hut Malaysia SSD</strong> — international enterprise client</div></div>
+            <div class="item"><div class="ibadge ib-teal">3</div><div class="itext">Solo-launched <strong>MyJio × GoFynd</strong> — zero critical post-launch issues</div></div>
+            <div class="item"><div class="ibadge ib-teal">4</div><div class="itext">Led QA team on <strong>TIRA iOS app</strong> — drove Cucumber BDD adoption</div></div>
+            <div class="item"><div class="ibadge ib-teal">5</div><div class="itext">Managed <strong>Theme project</strong> QA team; delivered Playwright automation for Gala theme</div></div>
+            <div class="item"><div class="ibadge ib-teal">6</div><div class="itext">Solely managed QA for <strong>GoFynd &amp; Uniket</strong> — regression &amp; release cycles</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon ci-gold">04</div>
+        <div class="card-title">Technical Expertise</div>
+      </div>
+      <div class="card-body">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div class="tech-sections">
+            <div>
+              <div class="tcat">Automation Frameworks</div>
+              <div class="tags"><span class="tag thl">RATL</span><span class="tag thl">Playwright</span><span class="tag thl">Cucumber BDD</span></div>
+            </div>
+            <div>
+              <div class="tcat">API &amp; Network Testing</div>
+              <div class="tags"><span class="tag ttl">Postman</span><span class="tag ttl">Charles Proxy</span><span class="tag ttl">REST APIs</span></div>
+            </div>
+            <div>
+              <div class="tcat">Mobile Testing</div>
+              <div class="tags"><span class="tag tg">ADB Commands</span><span class="tag tg">Xcode Instruments</span><span class="tag tg">iOS</span><span class="tag tg">Android</span></div>
+            </div>
+            <div>
+              <div class="tcat">QA Practices</div>
+              <div class="tags"><span class="tag tg">Test Planning</span><span class="tag tg">Regression</span><span class="tag tg">Defect Triage</span><span class="tag tg">Release Sign-off</span></div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div class="tcat">Tools &amp; DevOps</div>
+              <div class="tags" style="margin-bottom:13px"><span class="tag tg">Git</span><span class="tag tg">GitHub</span><span class="tag tg">Android Studio</span><span class="tag tg">Azure</span><span class="tag tg">JIRA</span><span class="tag tg">MongoDB</span><span class="tag tg">Sentry</span><span class="tag tg">Grafana</span><span class="tag tg">Kafka</span></div>
+            </div>
+            <div>
+              <div class="tcat">Platforms &amp; Domains</div>
+              <div class="tags"><span class="tag tg">Mobile</span><span class="tag tg">Web</span><span class="tag tg">mWeb</span><span class="tag tg">Kiosk / POS</span><span class="tag tg">E-commerce</span><span class="tag tg">Retail Tech</span><span class="tag tg">SSD</span></div>
+            </div>
+            <div class="ai-box">
+              <div class="ai-top"><div class="ai-dot"></div><div class="ai-label">AI Testing Toolkit</div></div>
+              <div class="ai-chips"><span class="aich">Cursor AI</span><span class="aich">ChatGPT</span><span class="aich">Claude</span></div>
+              <div class="ai-note">Generating test scripts, drafting test cases &amp; identifying edge cases — faster coverage without compromising quality.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col">
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon ci-rose">05</div>
+          <div class="card-title">Key Achievements</div>
+          <div class="card-num">5</div>
+        </div>
+        <div class="card-body">
+          <div class="ach-list">
+            <div class="ach"><div class="ach-n">01</div><div class="ach-t">Solo-launched <strong>MyJio × GoFynd</strong> with zero critical post-launch production issues</div></div>
+            <div class="ach"><div class="ach-n">02</div><div class="ach-t">Sole <strong>QA owner for Pizza Hut Malaysia</strong> — full quality pipeline for international enterprise</div></div>
+            <div class="ach"><div class="ach-n">03</div><div class="ach-t">Built <strong>RATL automation suites</strong> for Selfcheckout &amp; QSR — reliable regression at scale</div></div>
+            <div class="ach"><div class="ach-n">04</div><div class="ach-t"><strong>Playwright automation</strong> for Gala theme while managing team QA simultaneously</div></div>
+            <div class="ach"><div class="ach-n">05</div><div class="ach-t">Pioneered <strong>AI-assisted QA workflows</strong> — faster coverage, reduced manual overhead</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <div class="card-icon ci-teal">06</div>
+          <div class="card-title">Growth Focus</div>
+        </div>
+        <div class="card-body">
+          <div class="growth">
+            <div class="growth-label">Looking ahead</div>
+            <div class="growth-text">Looking to grow as a <strong>QA Lead and SDET</strong> — scaling AI-driven testing practices, mentoring junior QA engineers, and owning end-to-end quality strategy for larger cross-platform portfolios. Committed to keeping Fynd's quality bar at its highest as products grow in complexity and scale.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="foot">
+    <div class="fl"><strong>Simran Manchanda</strong> &nbsp;·&nbsp; QA Engineer &nbsp;·&nbsp; Fynd</div>
+    <div class="fr">People · Growth · Culture</div>
+  </div>
+
+</div>
